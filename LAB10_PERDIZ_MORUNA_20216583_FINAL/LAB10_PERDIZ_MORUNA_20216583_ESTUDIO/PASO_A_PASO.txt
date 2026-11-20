@@ -1,0 +1,69 @@
+LAB10 - PERDIZ MORUNA - PASO A PASO
+=====================================
+
+1. Ejecutar src/main/resources/db/perdiz_moruna.sql en MySQL Workbench.
+
+2. Revisar application.properties.
+   Por defecto:
+   usuario=root
+   password=root
+
+3. Ejecutar Lab10Application.java en IntelliJ.
+
+4. Abrir:
+   http://localhost:8080/
+
+5. Verificar el tablero 5x5.
+   Cada celda muestra un nivel entre 0 y 5.
+
+6. Colores:
+   0 -> #FFFFFF
+   1 -> #22C55E
+   2 -> #FACC15
+   3 -> #FB923C
+   4 -> #EF4444
+   5 -> #991B1B
+
+7. Esperar 8 segundos.
+   Todas las celdas aumentan 1.
+   Ninguna supera 5.
+
+8. Cambiar "Dimensiones del kernel":
+   2x2 -> 4 semillas
+   2x3 -> 6 semillas
+   3x2 -> 6 semillas
+
+   Se actualiza automáticamente sin botón.
+
+9. Probar valores inválidos:
+   0x2
+   6x2
+   texto
+
+10. Arrastrar TODO el kernel al tablero.
+
+11. Si el kernel cabe:
+    cada celda cubierta disminuye exactamente 1.
+
+12. Ninguna celda puede bajar de 0.
+
+13. Si el kernel no cabe cerca del borde:
+    no alimenta y muestra error.
+
+14. Presionar Pausar:
+    se detiene el incremento automático.
+
+15. Presionar Continuar:
+    se reanuda el temporizador.
+
+16. Presionar Reiniciar:
+    todas las celdas vuelven a 0.
+
+ARCHIVOS CLAVE
+==============
+Tablero.java
+TableroRepository.java
+TableroRestController.java
+index.html
+juego.js
+style.css
